@@ -84,7 +84,7 @@ function promise.new(executor: executor, env, ...)
 end;
 
 -- define o que acontece quando a Promise é resolvida com sucesso.
--- @param onFulfilled function Função a ser chamada quando a Promise for resolvida.
+---@param onFulfilled function Função a ser chamada quando a Promise for resolvida.
 -- @return Promise Retorna uma nova Promise encadeável.
 function promise:andThen(onFulfilled: executor)
 	assert(typeof(onFulfilled) == "function", INVALID_ARG_TYPE_ERR:format(1, "Function", typeof(onFulfilled)));
