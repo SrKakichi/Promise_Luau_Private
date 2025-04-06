@@ -74,7 +74,7 @@ function promise.new(executor: executor, env, ...)
 		self:_reject(...);
 	end;
 
-	-- se o parent não existir vai começar a execução do promise
+	-- se o env for de um promise ROOT_ENV ele executa
 	-- por si só sem necessitar de ativação externa
 	if env == ROOT_ENV then
 		task.spawn(pcallAndHandlePromise, self, ...);
