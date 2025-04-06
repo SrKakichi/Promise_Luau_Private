@@ -1,9 +1,9 @@
 --!strict
 
 ---@alias PromiseStates
----| '"pending"'
----| '"fulfilled"'
----| '"rejected"'
+---| "pending"
+---| "fulfilled"
+---| "rejected"
 
 local PENDING = "pending"
 local FULFILLED = "fulfilled"
